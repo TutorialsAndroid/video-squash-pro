@@ -1,0 +1,10 @@
+# Remove dist/ from Git
+/dist
+
+# Remove ffmpeg zip
+/ffmpeg-2026-05-06-git-f2e5eff3ff-essentials_build.7z
+
+/assets/ffmpeg.exe
+/assets/ffprobe.exe
+
+/node_modules/

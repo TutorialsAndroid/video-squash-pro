@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>
+      VideoSquash Pro Desktop – Compress 30GB+ Videos Offline | Free Download
+    </title>
+    <meta
+      name="description"
+      content="Compress videos of any size (30GB+) directly on your PC. Native FFmpeg engine, fully offline, batch processing. No uploads, 100% private. Download for Windows."
+    />
+    <meta
+      name="keywords"
+      content="video compressor desktop, compress 30GB video, ffmpeg video compressor, offline video compressor, bulk video compressor, download video compressor, Windows, free, private"
+    />
+    <meta name="author" content="VideoSquash Pro" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://tutorialsandroid.github.io/video-squash-pro/index.html"
+    />
+    <meta
+      property="og:title"
+      content="VideoSquash Pro Desktop – Compress Videos Up to 30GB+"
+    />
+    <meta
+      property="og:description"
+      content="Native FFmpeg video compressor for Windows. Handles massive files offline, in batch. Free download."
+    />
+    <meta
+      property="og:image"
+      content="https://tutorialsandroid.github.io/video-squash-pro/og-image.png"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content="https://tutorialsandroid.github.io/video-squash-pro/index.html"
+    />
+    <meta name="twitter:title" content="VideoSquash Pro Desktop" />
+    <meta
+      name="twitter:description"
+      content="Download the free Windows desktop app that compresses 30GB+ videos using native FFmpeg – offline & private."
+    />
+    <meta
+      name="twitter:image"
+      content="https://tutorialsandroid.github.io/video-squash-pro/og-image.png"
+    />
+
+    <meta name="theme-color" content="#7c3aed" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon/favicon.ico" />
+
+    <style>
+      :root {
+        --bg: #f5f3ff;
+        --surface: #ffffff;
+        --surface-alt: #faf5ff;
+        --border: #e9d5ff;
+        --border-hover: #c4b5fd;
+        --text: #2e1065;
+        --text-secondary: #6b21a8;
+        --text-muted: #9333ea;
+        --primary: #7c3aed;
+        --primary-hover: #6d28d9;
+        --primary-light: #ede9fe;
+        --primary-glow: rgba(124, 58, 237, 0.15);
+        --success: #10b981;
+        --success-light: #d1fae5;
+        --warning: #f59e0b;
+        --warning-light: #fef3c7;
+        --danger: #ef4444;
+        --danger-light: #fee2e2;
+        --info: #3b82f6;
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+        --shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+        --shadow-md:
+          0 4px 6px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.04);
+        --shadow-lg:
+          0 10px 25px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.04);
+        --shadow-xl:
+          0 20px 50px rgba(0, 0, 0, 0.12), 0 8px 20px rgba(0, 0, 0, 0.06);
+        --radius-sm: 8px;
+        --radius: 12px;
+        --radius-lg: 16px;
+        --radius-xl: 20px;
+        --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        --transition-slow: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        --font: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+        --font-mono:
+          "JetBrains Mono", "SF Mono", "Fira Code", "Consolas", monospace;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        height: 100%;
+      }
+      body {
+        font-family: var(--font);
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        display: flex;
+        flex-direction: column;
+        background-image:
+          radial-gradient(
+            ellipse at 20% 30%,
+            rgba(124, 58, 237, 0.04) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse at 80% 70%,
+            rgba(16, 185, 129, 0.03) 0%,
+            transparent 60%
+          );
+      }
+
+      /* ── Header (same as always) ───── */
+      .app-header {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 0 32px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.85);
+        box-shadow: var(--shadow-sm);
+      }
+      .header-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .header-logo {
+        width: 38px;
+        height: 38px;
+        /* background: var(--primary); */
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* color: #fff; */
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        /* box-shadow: 0 4px 12px var(--primary-glow); */
+      }
+      .header-title {
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: -0.3px;
+        color: var(--text);
+      }
+      .header-badge {
+        font-size: 11px;
+        font-weight: 600;
+        background: var(--primary-light);
+        color: var(--primary);
+        padding: 4px 10px;
+        border-radius: 20px;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+      }
+      .header-actions {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+      }
+      .main-nav {
+        display: flex;
+        gap: 6px;
+        background: var(--surface-alt);
+        padding: 4px;
+        border-radius: 28px;
+        border: 1px solid var(--border);
+      }
+      .nav-link {
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 7px 16px;
+        border-radius: 24px;
+        color: var(--text-secondary);
+        transition: all 0.2s ease;
+        white-space: nowrap;
+      }
+      .nav-link:hover {
+        color: var(--primary);
+        background: var(--primary-light);
+      }
+      .nav-link.active {
+        background: var(--primary);
+        color: #fff;
+        box-shadow: 0 2px 6px var(--primary-glow);
+      }
+      .header-subtitle {
+        font-size: 12px;
+        color: var(--text-muted);
+        font-weight: 500;
+        white-space: nowrap;
+      }
+
+      /* ── Slogan Bar ────────────────── */
+      .slogan-bar {
+        background: linear-gradient(
+          105deg,
+          var(--primary) 0%,
+          var(--primary-hover) 100%
+        );
+        color: #fff;
+        text-align: center;
+        padding: 10px 24px;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: -0.1px;
+        box-shadow: 0 2px 8px rgba(124, 58, 237, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .slogan-bar .shield {
+        font-size: 16px;
+      }
+
+      /* ── Main Content ──────────────── */
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 48px 24px 64px;
+        flex: 1;
+      }
+
+      .hero {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .hero h1 {
+        font-size: clamp(2.4rem, 6vw, 3.5rem);
+        font-weight: 800;
+        letter-spacing: -1px;
+        margin-bottom: 16px;
+        color: var(--text);
+      }
+      .hero h1 span {
+        background: linear-gradient(135deg, var(--primary), #a78bfa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .hero p {
+        font-size: 1.15rem;
+        color: var(--text-secondary);
+        max-width: 650px;
+        margin: 0 auto 32px;
+        line-height: 1.6;
+      }
+      .download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: var(--primary);
+        color: #fff;
+        padding: 16px 36px;
+        border-radius: 48px;
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 0 8px 20px var(--primary-glow);
+        transition: var(--transition);
+        border: none;
+        cursor: pointer;
+        letter-spacing: -0.2px;
+      }
+      .download-btn:hover {
+        background: var(--primary-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(124, 58, 237, 0.3);
+      }
+      .download-btn svg {
+        transition: transform 0.2s ease;
+      }
+      .download-btn:hover svg {
+        transform: translateY(1px);
+      }
+      .version-note {
+        font-size: 13px;
+        color: var(--text-muted);
+        margin-top: 12px;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
+        margin-bottom: 60px;
+      }
+      .feature-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 28px 24px;
+        box-shadow: var(--shadow-sm);
+        transition: var(--transition);
+      }
+      .feature-card:hover {
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-2px);
+      }
+      .feature-icon {
+        font-size: 36px;
+        margin-bottom: 16px;
+      }
+      .feature-card h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .feature-card p {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .capability-highlight {
+        background: var(--surface);
+        border-radius: var(--radius-xl);
+        padding: 40px;
+        text-align: center;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        margin-bottom: 60px;
+      }
+      .capability-highlight h2 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+      .capability-highlight p {
+        color: var(--text-secondary);
+        font-size: 1rem;
+        margin-bottom: 24px;
+      }
+      .big-number {
+        font-size: 3.5rem;
+        font-weight: 900;
+        background: linear-gradient(135deg, var(--primary), #c084fc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* ── Footer ────────────────────── */
+      .app-footer {
+        margin-top: auto;
+        padding: 20px 24px;
+        border-top: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+      }
+      .footer-content {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        font-size: 13px;
+        color: var(--text-secondary);
+      }
+      .footer-github {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 600;
+        transition: var(--transition);
+      }
+      .footer-github:hover {
+        color: var(--primary);
+        transform: translateY(-1px);
+      }
+      .footer-github svg {
+        transition: var(--transition);
+      }
+      .footer-github:hover svg {
+        transform: scale(1.08);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .app-header {
+          padding: 0 16px;
+          height: 56px;
+        }
+        .header-title {
+          font-size: 15px;
+        }
+        .header-badge {
+          display: none;
+        }
+        .hero h1 {
+          font-size: 2rem;
+        }
+        .capability-highlight {
+          padding: 24px;
+        }
+        .big-number {
+          font-size: 2.5rem;
+        }
+        .download-btn {
+          padding: 14px 28px;
+          font-size: 14px;
+        }
+        .container {
+          padding: 32px 16px 48px;
+        }
+      }
+
+      .logo-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: var(--radius-sm);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-brand">
+        <div class="header-logo">
+          <img
+            src="assets/logo/logo.png"
+            alt="ImageSquash Pro Logo"
+            class="logo-img"
+          />
+        </div>
+        <span class="header-title">VideoSquash Pro</span>
+        <span class="header-badge">Desktop</span>
+      </div>
+      <div class="header-actions">
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Slogan -->
+    <div class="slogan-bar">
+      <span class="shield">🔒</span>
+      Native FFmpeg engine – crushes 30 GB+ videos offline. No uploads, 100%
+      private.
+    </div>
+
+    <main class="container">
+      <!-- Hero -->
+      <div class="hero">
+        <h1>
+          The only <span>video compressor</span> that laughs at 30 GB files.
+        </h1>
+        <p>
+          Stop waiting for online uploads or crashing browser tabs. VideoSquash
+          Desktop uses native FFmpeg running directly on your machine to
+          compress videos of any size – in bulk, offline, and totally private.
+        </p>
+        <a
+          href="https://github.com/TutorialsAndroid/video-squash-pro/releases/latest"
+          class="download-btn"
+          target="_blank"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Download for Windows
+        </a>
+        <div class="version-note">
+          Free · Open Source · v1.1.6 · Windows 10/11
+        </div>
+      </div>
+
+      <!-- Key selling points -->
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">💪</div>
+          <h3>No size limits</h3>
+          <p>
+            Designed for raw footage, BD remuxes, and camera originals. Handles
+            30 GB, 50 GB, and beyond without breaking a sweat.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3>Native FFmpeg speed</h3>
+          <p>
+            Uses the industry-standard FFmpeg binary directly, not WebAssembly.
+            Enjoy full hardware acceleration and multi-threading.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔐</div>
+          <h3>100% offline</h3>
+          <p>
+            Zero internet connection needed after download. Your videos never
+            leave your hard drive. No ads, no analytics, no nonsense.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎛️</div>
+          <h3>Professional controls</h3>
+          <p>
+            CRF slider, resolution picker, H.264/HEVC/VP9/AV1 codecs, batch
+            processing, progress bars, and ZIP export.
+          </p>
+        </div>
+      </div>
+
+      <!-- Capability highlight -->
+      <div class="capability-highlight">
+        <span class="big-number">30GB+</span>
+        <h2>Tested with real-world files</h2>
+        <p>
+          We regularly compress Blu‑ray remuxes (35 GB), raw recording sessions,
+          and long 4K videos. The app streams from disk and never loads the
+          entire file into memory – so your RAM stays happy.
+        </p>
+      </div>
+
+      <!-- Another download prompt -->
+      <div style="text-align: center">
+        <a
+          href="https://github.com/TutorialsAndroid/video-squash-pro/releases/latest"
+          class="download-btn"
+          target="_blank"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Get it free
+        </a>
+        <div class="version-note" style="margin-top: 8px">
+          Available on GitHub Releases – one‑click installer
+        </div>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <div class="footer-content">
+        <span>© 2026 VideoSquash Pro</span>
+        <a
+          href="https://github.com/TutorialsAndroid/video-squash-pro"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-github"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2.02c-3.2.7-3.88-1.38-3.88-1.38-.53-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.97.1-.75.4-1.26.72-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.28 1.2-3.09-.12-.3-.52-1.5.11-3.13 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 5.82 0c2.22-1.5 3.2-1.18 3.2-1.18.63 1.63.23 2.83.11 3.13.75.81 1.2 1.83 1.2 3.09 0 4.43-2.7 5.4-5.27 5.69.41.35.78 1.04.78 2.1v3.11c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
+            />
+          </svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
