@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="https://tutorialsandroid.github.io/video-squash-pro/desktop.html"><strong>🌐 Landing Page</strong></a> ·
+  <a href="https://tutorialsandroid.github.io/video-squash-pro/index.html"><strong>🌐 Landing Page</strong></a> ·
   <a href="https://github.com/TutorialsAndroid/video-squash-pro/releases/download/v1.1.9/VideoSquash.Pro.Setup.1.1.9.exe"><strong>⬇️ Download for Windows</strong></a> ·
   <a href="#features">Features</a> ·
   <a href="#tech-stack">Tech Stack</a> ·
