@@ -16,7 +16,8 @@
   <a href="https://github.com/TutorialsAndroid/video-squash-pro/releases/download/v1.1.9/VideoSquash.Pro.Setup.1.1.9.exe"><strong>⬇️ Download for Windows</strong></a> ·
   <a href="#features">Features</a> ·
   <a href="#tech-stack">Tech Stack</a> ·
-  <a href="#usage">Usage</a>
+  <a href="#usage">Usage</a> ·
+  <a href="SETUP.md"><strong>📖 Developer Setup</strong></a>
 </p>
 
 <br/>
@@ -89,6 +90,8 @@ Online video compressors can’t handle real footage. Uploading a 35 GB Blu‑
 4. Launch **VideoSquash Pro** from the Start Menu or desktop shortcut.
 
 ### Option 2: Run from source (for developers)
+
+**📖 For detailed setup instructions, see [SETUP.md](SETUP.md)**
 
 ```bash
 git clone https://github.com/TutorialsAndroid/video-squash-pro.git
