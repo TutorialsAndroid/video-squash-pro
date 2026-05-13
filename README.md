@@ -53,15 +53,6 @@ Online video compressors can’t handle real footage. Uploading a 35 GB Blu‑
 
 <br/>
 
-## 📸 Screenshots
-
-> *Add your own screenshots after building the app. Suggested shots:*  
-> - Main interface with several videos queued  
-> - Compression progress with percentage bar  
-> - Settings panel showing presets and codec options  
-
-<br/>
-
 ## 🚀 How It Works (under the hood)
 
 1. **Electron** hosts the UI (HTML/CSS/JS) and spawns a native FFmpeg child process.
