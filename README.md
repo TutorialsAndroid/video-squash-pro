@@ -1,3 +1,6 @@
+<!-- Open Graph Meta Tags -->
+![og-image](https://raw.githubusercontent.com/TutorialsAndroid/video-squash-pro/refs/heads/main/assets/og-image.png)
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/TutorialsAndroid/video-squash-pro/refs/heads/main/assets/logo/logo.png" alt="VideoSquash Pro Logo" width="120" />
 </p>
